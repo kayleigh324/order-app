@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -72,4 +72,33 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Cards;*/
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import { Product } from './ProductData'; // Assuming the path is correct
+
+interface ProductCardProps {
+  product: Product;
+}
+
+function ProductCard({ product }: ProductCardProps) {
+  return (
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={product.src} alt={product.title} />
+      <Card.Body>
+        <Card.Title>{product.title}</Card.Title>
+        <Card.Text>
+          Price: ${product.price.toFixed(2)}
+        </Card.Text>
+      </Card.Body>
+      <Card.Body>
+        <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link href="#">Another Link</Card.Link>
+      </Card.Body>
+    </Card>
+  );
+}
+
+export default ProductCard;
+
+
