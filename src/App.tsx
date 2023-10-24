@@ -1,10 +1,14 @@
 import React from 'react';
 import Navbar from './NavBar/NavBar';
+import Example from './SideBar/SideBar';
+import Cards from './Cards/Cards';
 
 const App: React.FC = () => {
   return (
     <div>
       <Navbar />
+      <Example />
+      <Cards />
       <div className="container mt-4">
         <h1>Hello, World!</h1>
       </div>
