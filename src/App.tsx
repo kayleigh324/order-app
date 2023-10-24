@@ -9,9 +9,6 @@ const App: React.FC = () => {
       <Navbar />
       <Example />
       <Cards />
-      <div className="container mt-4">
-        <h1>Hello, World!</h1>
-      </div>
     </div>
   );
 }
